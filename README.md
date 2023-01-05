@@ -1,4 +1,4 @@
-![visitors](https://visitor-badge.glitch.me/badge?page_id=monlih.monlih)
+![visitors](https://visitor-badge.glitch.me/badge?page_id=monlih.readme-chess)
 
 ## Play Chess
 
