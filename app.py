@@ -15,7 +15,7 @@ last_move = None
 split_pgn = re.compile(r"\s*(\d+\.)\s*")
 
 no_cache_headers = {"Cache-Control": "no-cache,no-store,must-revalidate","expires": "0","pragma": "no-cache"}
-redir_url = "http://localhost:8000" # hardcode for now
+redir_url = "https://github.com/MonliH/readme-chess#play-chess" # hardcode for now
 
 @app.get("/click-grid")
 async def click(r: int, c: int):
