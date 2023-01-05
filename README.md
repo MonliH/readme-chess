@@ -2,7 +2,7 @@
 
 ## Play Chess
 
-Play chess against someone else on the internet (global game):
+Play chess a (global) game of chess:
 
 <a href="http://chess.jonat.li/click-grid?r=0&c=0"><img width="60" src="http://chess.jonat.li/render-grid/0/0"></img></a> <a href="http://chess.jonat.li/click-grid?r=0&c=1"><img width="60" src="http://chess.jonat.li/render-grid/0/1"></img></a> <a href="http://chess.jonat.li/click-grid?r=0&c=2"><img width="60" src="http://chess.jonat.li/render-grid/0/2"></img></a> <a href="http://chess.jonat.li/click-grid?r=0&c=3"><img width="60" src="http://chess.jonat.li/render-grid/0/3"></img></a> <a href="http://chess.jonat.li/click-grid?r=0&c=4"><img width="60" src="http://chess.jonat.li/render-grid/0/4"></img></a> <a href="http://chess.jonat.li/click-grid?r=0&c=5"><img width="60" src="http://chess.jonat.li/render-grid/0/5"></img></a> <a href="http://chess.jonat.li/click-grid?r=0&c=6"><img width="60" src="http://chess.jonat.li/render-grid/0/6"></img></a> <a href="http://chess.jonat.li/click-grid?r=0&c=7"><img width="60" src="http://chess.jonat.li/render-grid/0/7"></img></a>
 <br/>
