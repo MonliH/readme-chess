@@ -15,7 +15,7 @@ last_move = None
 split_pgn = re.compile(r"\s*(\d+\.)\s*")
 
 no_cache_headers = {"Cache-Control": "no-cache,no-store,must-revalidate","expires": "0","pragma": "no-cache"}
-redir_url = "https://github.com/MonliH/readme-chess#play-chess" # hardcode for now
+redir_url = "http://localhost:8000" # hardcode for now
 
 @app.get("/click-grid")
 async def click(r: int, c: int):
@@ -81,11 +81,14 @@ async def render():
     # display played moves
     moves = list(filter(bool, split_pgn.split(base_board.variation_san(board.move_stack))))
     # chunk moves into pairs
-    moves = [" ".join(moves[i:i+2]) for i in range(0, len(moves), 2)][-6:]
-    moves = "\n".join((f"""<text x="6" y="{i*19 + 18+32}" style="font:18px sans-serif;">{move}</text>""" for i, move in enumerate(moves)))
-    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.2" baseProfile="tiny">\
-<rect width="200" height="1000" style="fill: rgba(255,255,255);" rx="5" ry="5" />\
-<text x="6" y="24" style="font:bold 24px sans-serif;">Moves so far:</text>\
+    moves = [" ".join(moves[i:i+2]) for i in range(0, len(moves), 2)][-65:]
+    n_moves = len(moves)
+    height = n_moves*22+48
+
+    moves = "\n".join((f"""<text x="6" y="{i*22 + 18+40}" style="font:18px sans-serif;">{move}</text>""" for i, move in enumerate(moves)))
+    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.2" baseProfile="tiny" height="{height}">\
+<rect width="200" height="{height}" style="fill: rgba(255,255,255);" rx="5" ry="5" />\
+<text x="6" y="32" style="font:bold 24px sans-serif;">Moves so far:</text>\
 {moves}\
 </svg>"""
     return Response(content=svg, media_type="image/svg+xml", headers=no_cache_headers)
